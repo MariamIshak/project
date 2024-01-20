@@ -32,23 +32,27 @@ export class LoginComponent {
   send() {
     if (this.loginForm.valid) {
       console.log('first')
+// this part to send login data to make sure if the user is exist (Authentication)
 
-      this.accountSrv.login(this.loginForm.controls["email"].value,this.loginForm.controls["password"].value).subscribe({
-          next: (response) => {
-            console.log('first')
-            if(response.status==200){
+// /////////i commented this part to make sure that any one can show the site without needing the backend responce ///////////
+
+      // this.accountSrv.login(this.loginForm.controls["email"].value,this.loginForm.controls["password"].value).subscribe({
+      //     next: (response) => {
+      //       console.log('first')
+      //       console.log(response)
+      //       if(response.status==200){
             console.log('200')
 
-              this.accountSrv.setuser(response.data.token,response.data.user,response.data.user.image)             
+              this.accountSrv.setuser("response.data.token","response.data.user","response.data.user.image")             
               this.router.navigateByUrl('/admin/main')
             }
 
             else {
             console.log('401')
-
               this.openSnackBar('response.message')
             }
           }
-        })
-    }}
-}
+        }
+//         })
+//     }}
+// }
