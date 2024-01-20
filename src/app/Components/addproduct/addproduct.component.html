@@ -1,1 +1,67 @@
-<p>addproduct works!</p>
+
+<form class="example-form" [formGroup]="addForm" (ngSubmit)="onFormSubmit()">
+    <mat-label class="header"> Product Form</mat-label>
+    <span></span>
+    <div mat-dialog-content class="content">
+      <div class="example-full-width">
+        <mat-form-field appearance="outline">
+          <mat-label>Product Name</mat-label>
+          <input matInput type="text" placeholder="" formControlName="name">
+          <div *ngIf="addForm.get('name')?.errors && addForm.get('name')?.touched" class="error-message">
+          </div>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Stock</mat-label>
+            <input matInput type="number" placeholder="" formControlName="stock">
+            <div *ngIf="addForm.get('stock')?.errors && addForm.get('stock')?.touched" class="error-message">
+            </div>
+          </mat-form-field>
+      </div>
+  
+      <div class="example-full-width">
+        <mat-form-field appearance="outline">
+          <mat-label>Category</mat-label>
+          <input matInput type="text" placeholder="" formControlName="category">
+          <div *ngIf="addForm.get('category')?.errors && addForm.get('category')?.touched" class="error-message">
+          </div>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Seller</mat-label>
+            <input matInput type="text" placeholder="" formControlName="seller">
+            <div *ngIf="addForm.get('seller')?.errors && addForm.get('seller')?.touched" class="error-message">
+            </div>
+          </mat-form-field>
+      </div>
+      
+      <div class="example-full-width">
+        <mat-form-field appearance="outline">
+          <mat-label>Price</mat-label>
+          <input matInput type="number" placeholder="" formControlName="price">
+          <div *ngIf="addForm.get('price')?.errors && addForm.get('price')?.touched" class="error-message">
+          </div>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Rate</mat-label>
+            <input matInput type="number" placeholder="" formControlName="rate">
+            <div *ngIf="addForm.get('rate')?.errors && addForm.get('rate')?.touched" class="error-message">
+            </div>
+          </mat-form-field>
+      </div>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>description</mat-label>
+        <input matInput type="text" placeholder="" formControlName="description">
+        <div *ngIf="addForm.get('description')?.errors && addForm.get('description')?.touched" class="error-message">
+        </div>
+      </mat-form-field>
+  
+      <div>
+        <label for="validationCustom02" class="form-label">Upload product image</label>
+        <input class="form-control"   type="file" #image (change)="upload(image.files)">
+      </div>
+    </div>
+    <div mat-dialog-actions class="action">
+      <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </div>
+  </form>

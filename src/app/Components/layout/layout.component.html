@@ -1,1 +1,11 @@
-<p>layout works!</p>
+<div class="layout">
+    <div class=" header ">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="side">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div [@routeFade]="o.isActivated?o.activatedRoute:''" class="main">
+        <router-outlet #o="outlet"></router-outlet>
+    </div>
+</div>

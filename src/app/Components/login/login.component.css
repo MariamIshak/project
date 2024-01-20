@@ -1,0 +1,37 @@
+.invalid-feedback{
+    display: block;
+}
+.row{
+    margin: 0 auto;
+    width: 90%;
+    height: 70vh;
+    
+}
+.image{
+    width: 70%;
+    height: 70vh;
+}
+.image img{
+    width: 90%;
+    height: 100%;
+
+}
+.form{
+    width: 30%;
+}
+.btn{
+    background-color: #76005f;
+    border: none;
+    padding-left: 30px;
+    padding-right:30px;
+}
+.card{
+   height: 80vh;
+   width: 100%;
+   margin: 85px  auto;
+   border: none;
+
+}
+.form-label{
+    font-size: 20px;
+}

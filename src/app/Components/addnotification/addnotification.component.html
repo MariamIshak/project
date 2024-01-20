@@ -1,0 +1,29 @@
+<form class="example-form" [formGroup]="addForm" (ngSubmit)="onFormSubmit()">
+    <mat-label class="header">Notifications Form</mat-label>
+    <span></span>
+    <div mat-dialog-content class="content">
+        <div class="example-full-width">
+            <mat-form-field appearance="outline">
+
+                <mat-label> Message</mat-label>
+                <input matInput type="textarea" placeholder="" formControlName="message">
+                <div *ngIf="addForm.get('message')?.errors && addForm.get('message')?.touched"
+                 class="error-message">
+                </div>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Deletation Time</mat-label>
+                <input matInput type="deletationTime" placeholder="Ex. test@gmail.com" formControlName="deletionTime">
+                <div *ngIf="addForm.get('deletionTime')?.errors && addForm.get('deletionTime')?.touched"
+                    class="error-message">
+                </div>
+            </mat-form-field>
+        </div>
+    </div>
+    
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+    </div>
+</form>

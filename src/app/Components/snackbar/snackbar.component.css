@@ -1,0 +1,19 @@
+.snackbar{
+    border-radius: 20px;
+    /* box-sizing: border-box; */
+    /* transform: translateY(100%) translateY(24px); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+           
+}
+.p{
+    color:#eba5d09c;
+    font-size: 20px;
+    font-weight: 500;
+}
+.span{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}

@@ -1,1 +1,41 @@
-<p>addblog works!</p>
+<form class="example-form" [formGroup]="addForm" (ngSubmit)="onFormSubmit()">
+    <mat-label class="header">Blog Form</mat-label>
+    <span></span>
+    <div mat-dialog-content class="content">
+      <div class="example-full-width">
+        <mat-form-field appearance="outline">
+          <mat-label>title</mat-label>
+          <input matInput type="text" placeholder="Novel" formControlName="title">
+          <div *ngIf="addForm.get('title')?.errors && addForm.get('title')?.touched" class="error-message">
+          </div>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Author</mat-label>
+          <input matInput type="text" placeholder="Author" formControlName="author">
+        </mat-form-field>
+      </div>
+  
+      <p>
+        <mat-form-field class="example-full-width">
+          <mat-label>Content</mat-label>
+          <textarea matInput placeholder="Ex. 100 Main St" formControlName="content" >1600 Amphitheatre Pkwy</textarea>
+        </mat-form-field>
+      </p>
+        
+      <p>
+        <mat-form-field class="example-full-width">
+          <mat-label>Comments</mat-label>
+          <textarea matInput placeholder="Ex. 100 Main St" formControlName="comments" >1600 Amphitheatre Pkwy</textarea>
+        </mat-form-field>
+      </p>
+  
+      <div>
+        <label for="validationCustom02" class="form-label">Upload blog image</label>
+        <input class="form-control"   type="file" #image (change)="upload(image.files)">
+      </div>
+    </div>
+    <div mat-dialog-actions class="action">
+      <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </div>
+  </form>

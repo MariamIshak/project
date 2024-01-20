@@ -1,0 +1,29 @@
+
+<form class="example-form" [formGroup]="editForm" (ngSubmit)="onFormSubmit()">
+    <mat-label class="header"> Vaccine Form</mat-label>
+    <span></span>
+    <div mat-dialog-content class="content">
+      <div class="example-full-width">
+        <mat-form-field appearance="outline">
+          <mat-label>Vaccine Name</mat-label>
+          <input matInput type="text" placeholder="" formControlName="name">
+         
+        </mat-form-field>
+        
+       
+        
+        <mat-form-field appearance="outline">
+          <mat-label> Required Age</mat-label>
+          <input matInput type="number" placeholder="" formControlName="age">
+         
+        </mat-form-field>
+      </div>
+    
+      
+      
+      <div mat-dialog-actions class="action">
+          <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+          <button mat-raised-button  type="submit">Submit</button>
+        </div>
+    </div>
+  </form>

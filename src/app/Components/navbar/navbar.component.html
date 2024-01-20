@@ -1,1 +1,64 @@
-<p>navbar works!</p>
+<!-- <ul class="nav justify-content-end ">
+  
+  <li> <div matBadge="4" matBadgeOverlap="false" class="demo-section"><button mat-menu-item><i class="fa fa-comments  nav-item icon " ></i></button>
+    </div></li>
+  <li class="icon  align-items-center nav-item dropdown">
+    
+      <img src="../../../assets/images/admin.jpg" alt="" />
+      <a [matMenuTriggerFor]="menu"><i class=" btn dropdown-toggle " type="button" id="dropdownMenuButton1"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i></a>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="logout()"><i class="fa fa-right-from-bracket me-2"></i>Log out</button>
+      <button mat-menu-item><i class="fa fa-gears me-2"></i>Settings</button>
+    </mat-menu>
+  </li>
+</ul> -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-color ">
+    <!-- Container wrapper -->
+    <div class="container-fluid ">
+      
+  
+      <!-- Toggle button -->
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars text-light"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       
+  
+        <!-- Right links -->
+        <ul class="navbar-nav ms-auto d-flex flex-row ">
+          <li class="nav-item text-center  ">
+            <div class="nav-link" href="#!">
+              <a routerLink="admin/message">
+                <i class="fas fa-bell fa-lg mb-1"></i>
+                <!-- <span class="badge rounded-pill badge-notification bg-warning">{{00000}}</span> -->
+              </a>
+              
+            </div >
+          </li>
+          
+  
+          <li class="icon  align-items-center nav-item dropdown">
+            <img src='http://localhost:4000/{{img}}' alt="" />
+            <a [matMenuTriggerFor]="menu"><i class=" btn dropdown-toggle " type="button" id="dropdownMenuButton1"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i></a>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="logout()"><i class="fa fa-right-from-bracket me-2"></i>Log out</button>
+          </mat-menu>
+        </li>
+        </ul>
+        <!-- Right links -->
+  
+        <!-- Search form -->
+       
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->

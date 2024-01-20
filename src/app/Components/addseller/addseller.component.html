@@ -1,0 +1,68 @@
+
+<form class="example-form" [formGroup]="addForm" (ngSubmit)="onFormSubmit()">
+    <mat-label class="header">Seller Form</mat-label>
+    <span></span>
+    <div mat-dialog-content class="content">
+      <div class="example-full-width">
+        <mat-form-field appearance="outline">
+          <mat-label>User Name</mat-label>
+          <input matInput type="text" placeholder="Mohamed" formControlName="name">
+          <div *ngIf="addForm.get('name')?.errors && addForm.get('name')?.touched" class="error-message">
+          </div>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Age</mat-label>
+          <input matInput type="text" placeholder="Age" formControlName="age">
+        </mat-form-field>
+      </div>
+  
+      <div class="example-full-width">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" placeholder="Ex. test@gmail.com" formControlName="email">
+          <div *ngIf="addForm.get('email')?.errors && addForm.get('email')?.touched" class="error-message">
+          </div>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Phone Number</mat-label>
+          <input matInput type="text" placeholder="Ex.0122929228" formControlName="phone">
+        </mat-form-field>
+      </div>
+  
+      <div class="example-full-width">
+        <mat-form-field appearance="outline">
+          <mat-label>Products Type</mat-label>
+          <input matInput placeholder="Ex. 4" type="text" formControlName="productsType">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>totalOrders</mat-label>
+          <input matInput placeholder="Ex. 4" type="number" formControlName="totalOrders">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>password</mat-label>
+          <input matInput placeholder="Ex. 4" type="password" formControlName="password">
+        </mat-form-field>
+        <!-- <mat-form-field appearance="outline">
+          <mat-label>Date of birth</mat-label>
+          <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY" formControlName="dob">
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field> -->
+      </div>
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Address</mat-label>
+            <textarea matInput placeholder="Ex. 100 Main St" formControlName="address" >1600 Amphitheatre Pkwy</textarea>
+          </mat-form-field>
+        </p>
+  
+      <div>
+        <label for="validationCustom02" class="form-label">Upload product image</label>
+        <input class="form-control"  type="file" #image (change)="upload(image.files)">
+      </div>
+    </div>
+    <div mat-dialog-actions class="action">
+      <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </div>
+  </form>

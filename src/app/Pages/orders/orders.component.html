@@ -1,0 +1,84 @@
+<!-- <button class="btn" (click)="openAddForm()">
+  ADD order
+</button> -->
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+      
+      <!-- Name Column -->
+      <ng-container matColumnDef="userId">
+        <th mat-header-cell *matHeaderCellDef> clientID </th>
+        <td mat-cell *matCellDef="let element"> {{element.user}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> clientName </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+        <ng-container matColumnDef="phone">
+            <th mat-header-cell *matHeaderCellDef> clientPhone </th>
+            <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+          </ng-container>
+      
+  
+      <!-- -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> clientEmail </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+      <!--  -->
+      <ng-container matColumnDef="clientAddress">
+        <th mat-header-cell *matHeaderCellDef> clientAddress </th>
+        <td mat-cell *matCellDef="let element"> {{element.address}}, {{element.street}}  </td>
+      </ng-container>
+      <!--  -->
+      <ng-container matColumnDef="totalAmount">
+        <th mat-header-cell *matHeaderCellDef> totalAmount </th>
+        <td mat-cell *matCellDef="let element"> {{element.totalAmount}} </td>
+      </ng-container>
+      <!--  -->
+      <ng-container matColumnDef="products">
+        <th mat-header-cell *matHeaderCellDef> products </th>
+        <td mat-cell *matCellDef="let element"> {{element.products.length}} </td>
+      </ng-container>
+     
+      <!--  -->
+      <ng-container matColumnDef="orderedDate">
+        <th mat-header-cell *matHeaderCellDef> orderedDate </th>
+        <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+      </ng-container>
+      <!--  -->
+      <!--  -->
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> status </th>
+        <td mat-cell *matCellDef="let element"> <p [ngClass]="{'pending': element.delStatus=='pending', 'in_progress': element.delStatus=='shipping', 'delivered': element.delStatus=='delivered' ,'canceled': element.delStatus=='canceled'}">{{element.delStatus}} </p></td>
+      </ng-container>
+      <!--  -->
+      
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>  </th>
+        <td mat-cell *matCellDef="let element">
+          <div class="actions">
+  
+            <div class="example-button-container mx-2">
+              <button mat-fab color="Basic" aria-label="Example icon button with a delete icon" class="edit" (click)="editdelStatus(element)">
+                <mat-icon>edit</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button mat-fab color="accent" aria-label="Example icon button with a delete icon" class="delete" (click)="deleteOrder(element._id)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </div>
+        </td>
+      </ng-container>
+  
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[10, 5, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>

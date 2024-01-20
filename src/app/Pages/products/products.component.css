@@ -1,0 +1,92 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+.btn{
+  color: white;
+  margin-left: 100px;
+  background:linear-gradient(#d9e79d,#a96f90);
+  border: #1e2530 1px solid;
+}
+
+.mat-mdc-table .mdc-data-table__header-row {
+  height: 56px;
+  background-color:#3a002f;
+  
+}
+
+.cdk-header-cell {
+  color: white;
+}
+
+.mdc-data-table__cell {
+  color: #a96f90;
+  background-color: white;
+}
+
+;
+
+/*
+  .sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #f1f1f1;
+    position: fixed;
+    left: -200px;
+    transition: left 0.3s ease;
+  }
+
+  .body {
+    transition: margin-left 0.3s ease;
+    margin-left: 0;
+  }
+
+  .sidebar-open .body {
+    margin-left: 200px;
+  } */
+
+
+
+.example-button-container {
+  padding: 5px;
+  margin-left: 70px;
+}
+
+.delete{
+  background-color:white;
+  color:rgb(89, 89, 89);
+}
+
+.delete:hover{
+  background-color:rgb(222, 4, 4);
+  color: white;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+th {
+  text-align: center;
+  background-color: #a96f90;
+}
+
+td {
+  width: 10%;
+  text-align: center;
+}
+
+.icon {
+  margin: 10px;
+  width: 100px;
+  border-radius: 20px;
+}
+
+.mdc-fab {
+  width: 40px;
+  height: 40px;
+}
+
+.mat-elevation-z8 {
+  margin: 70px;
+}

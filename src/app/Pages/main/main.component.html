@@ -1,0 +1,213 @@
+<main class="site-wrapper">
+    <!-- cards -->
+    <div class="cards d-flex row justify-content-evenly flex-wrap ">
+<!-- first two cards only appear in the first time and others appeare after
+     two taps in mother charts hexagon item or any item in page  -->
+        <mat-grid-list  class="card center " rowHeight="100px" [ngClass]="{'red': users.count==0}">
+            <h3 class="card_content">No.Of Users</h3>
+            <div class="card_layout"> <i class="fa fa-users"></i>
+        <h4 class="pt-2">{{users.count}}</h4></div>
+        <!-- <canvas id="myChart" style="width: 200px; height:8vh;"></canvas> -->
+
+        </mat-grid-list>
+        <mat-grid-list  class="card center " rowHeight="100px">
+            <h3 class="card_content">No.Of Orders</h3>
+            <div class="card_layout"><i class="fa fa-life-ring"></i>
+                <h4 class="pt-2">{{orders.length}}</h4></div>
+        </mat-grid-list> 
+        <mat-grid-list  class="card center " rowHeight="100px">
+            <h3 class="card_content">Created blogs</h3>
+            <div class="card_layout"><i class="fa fa-blog"></i>
+                <h4 class="pt-2">{{4}}</h4>
+            </div>
+        </mat-grid-list> 
+        <mat-grid-list  class="card center" rowHeight="100px">
+            <h3 class="card_content">No.Of Sales</h3>
+            <div class="card_layout"><i class="fa fa-tag"></i>
+                <h4 class="pt-2">{{4}}</h4></div>
+        </mat-grid-list> 
+        <mat-grid-list  class="card center" rowHeight="100px" >
+            <h3 class="card_content" > Comments</h3>
+            <div class="card_layout"><i class="fa fa-comments"></i>
+                <h4 class="py-3">{{4}}</h4></div>
+        </mat-grid-list> 
+        <mat-grid-list  class="card center" rowHeight="100px">
+            <h3 class="card_content">Daily Visits</h3>
+            <div class="card_layout"><i class="fa fa-eye"></i>
+                <h4 class="py-3">0</h4></div>
+        </mat-grid-list>
+    </div>
+    
+    <!-- hexagonals -->
+    <div class=" desktop-768 mt-4 mb-5">
+       
+                    <div class=" hex">
+
+                        <div class="hexagon-menu clear">
+                            <div class="hexagon-item">
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <a class="hex-content" routerLink="/admin/main/mothercharts">
+                                    <span class="hex-content-inner">
+                                        <span class="icon">
+                                            <i class="fa fa-universal-access"></i>
+                                        </span>
+                                        <span class="title">Mother Charts</span>
+                                    </span>
+                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                            fill="#440037"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="hexagon-item">
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <a class="hex-content" routerLink="/admin/main/pregnantcharts">
+                                    <span class="hex-content-inner">
+                                        <span class="icon">
+                                            <i class="fa fa-person-pregnant"></i>
+                                        </span>
+                                        <span class="title">Pregnant Charts</span>
+                                    </span>
+                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                            fill="#440037"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="hexagon-item">
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <a class="hex-content" routerLink="/admin/main/sellercharts">
+                                    <span class="hex-content-inner">
+                                        <span class="icon">
+                                            <i class="fa fa-shop"></i>
+                                        </span>
+                                        <span class="title">seller Charts</span>
+                                    </span>
+                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                            fill="#440037"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="hexagon-item">
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <a class="hex-content" routerLink="/admin/main/ordercharts">
+                                    <span class="hex-content-inner">
+                                        <span class="icon">
+                                            <i class="fa fa-life-ring"></i>
+                                        </span>
+                                        <span class="title">Orders Charts</span>
+                                    </span>
+                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                            fill="#440037"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="hexagon-item">
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <a class="hex-content" routerLink="/admin/main/productcharts">
+                                    <span class="hex-content-inner">
+                                        <span class="icon">
+                                            <i class="fa fa-basket-shopping"></i>
+                                        </span>
+                                        <span class="title">Products Charts</span>
+                                    </span>
+                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                            fill="#440037"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="hexagon-item">
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <a class="hex-content" routerLink="/admin/main/blogcharts">
+                                    <span class="hex-content-inner">
+                                        <span class="icon">
+                                            <i class="fa fa-blog"></i>
+                                        </span>
+                                        <span class="title">Blogs Charts</span>
+                                    </span>
+                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                            fill="#440037"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+           
+   <div [@routeMove]="o.isActivated?o.activatedRoute:''" class="charts_container">
+
+       <router-outlet  #o="outlet"></router-outlet>
+    </div>
+       
+</main>

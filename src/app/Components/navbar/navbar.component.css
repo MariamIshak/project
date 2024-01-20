@@ -1,0 +1,44 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+
+.btn {
+     color: #76005f;
+    border:none;
+
+}
+a {
+    color: deeppink;
+}
+.icon {
+    width: 40%;
+    border-radius: 50%;
+    /* margin-right: 5px; */
+}
+
+img {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.fa-bell {
+    color: #70065f;
+    font-size: x-large;
+    padding-top: 20px;
+    /* padding-left: 2px; */
+}
+.navbar-nav{
+    align-items: center;
+}
+.navbar {
+    z-index: 999;
+}
+
+.navbar-nav {
+    justify-content: space-evenly;
+    width: 18%;
+}
+.navbar-color{
+   background-color:  #fff;
+   box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.07);
+
+}
